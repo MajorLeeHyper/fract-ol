@@ -6,7 +6,7 @@
 #    By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/06 14:07:33 by dnelson           #+#    #+#              #
-#    Updated: 2017/07/12 11:49:20 by dnelson          ###   ########.fr        #
+#    Updated: 2017/07/12 14:45:47 by dnelson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC = main.c \
 	  tricorn.c \
 	  color.c \
 	  key_hooks.c \
+	  help.c \
 	  carpet_hooks.c \
 	  mouse_controls.c
 

@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 15:06:59 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 11:49:59 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:41:15 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		help_window_checks(int keycode, t_env *env)
 {
 	if (keycode == KEY_H && env->help == 0)
 	{
-	//	show_help_window(env);
+		show_help_window(env);
 		env->help = 1;
 	}
 	else if (keycode == KEY_H && env->help == 1)
@@ -68,6 +68,13 @@ int		even_more_keys(int keycode, t_env *env)
 		else
 			env->mouse = 0;
 	}
+	else if (color_key_check(keycode))
+	{
+		color_change(keycode, env);
+		draw(env);
+	}
+	else
+		help_window_checks(keycode, env);
 	return (0);
 }
 

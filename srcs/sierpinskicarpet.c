@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 10:52:30 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 11:42:56 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:06:05 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	begin_carpet(t_env *env)
 	env->maxy = 3;
 	env->x = 0;
 	env->y = 0;
-	env->help = 1;
+	env->help = 0;
 }
 
 int		is_filled(t_env *env, int x, int y)

@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:08:30 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 11:41:25 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:44:34 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,13 @@ void	start_fract(int fract, t_env *env)
 	else if (fract == 5 || fract == 6)
 		begin_tricorn(env);
 	draw(env);
+	show_help_window(env);
+	env->help = 1;
 	mlx_mouse_hook(env->win, mouse_zoom, env);
 	mlx_hook(env->win, 6, 1L<<6, julia_mouse, env);
 	mlx_hook(env->win, 2, 1L<<0, key_press_hook, env);
 	mlx_loop(env->mlx);
 }
-
 
 int		main(int ac, char **av)
 {

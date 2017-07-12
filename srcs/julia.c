@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 13:17:55 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/10 18:02:43 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:49:00 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ void		begin_julia(t_env *env)
 	env->maxy = 2.0;
 	env->cr = 0.0;
 	env->ci = 0.72;
-	env->help = 1;
+	env->help = 0;
 	env->mouse = 1;
-	env->r = 13;
-	env->g = 22;
-	env->b = 19;
+	env->r = 15;
+	env->g = 25;
+	env->b = 20;
 	env->zc = 0;
 }
 

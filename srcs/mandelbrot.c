@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:55:25 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 12:07:26 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:05:50 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	begin_mandelbrot(t_env *env)
 	env->miny = -1.75;
 	env->maxx = 2.0;
 	env->maxy = 1.75;
-	env->help = 1;
+	env->help = 0;
 	env->mx = 0;
 	env->my = 0;
 	env->r = 5;

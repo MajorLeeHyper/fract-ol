@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 10:48:40 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/11 13:43:18 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:49:20 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	begin_tricorn(t_env *env)
 	env->miny = -1.3;
 	env->maxx = 1.85;
 	env->maxy = 1.25;
-	env->help = 1;
-	env->r = 25;
+	env->help = 0;
+	env->r = 35;
 	env->g = 5;
-	env->b = 25;
+	env->b = 95;
 	env->zc = 0;
 }
 

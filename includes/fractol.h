@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:08:10 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 11:49:08 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:43:30 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,21 @@
 # define WIN_Y 500
 
 /*
+** Help text color definition to save space
+*/
+
+# define HELP 0xFF00FF
+
+/*
 ** Keyboad input number definitions
 */
 
+# define KEY_L_CONTROL 256
+# define KEY_L_ALT 261
+# define KEY_L_COMMAND 259
+# define KEY_R_COMMAND 260
+# define KEY_R_ALT 262
+# define KEY_R_CONTROL 269
 # define KEY_H 4
 # define KEY_1 18
 # define KEY_2 19
@@ -86,7 +98,9 @@ void			begin_carpet(t_env *env);
 void			sierpinski_carpet(t_env *env);
 void			begin_tricorn(t_env *env);
 void			tricorn(t_env *env);
+int				color_key_check(int key);
 int				color(t_env *env);
+void			color_change(int key, t_env *env);
 int				mouse_zoom(int b, int x, int y, t_env *env);
 int				mouse_zoom_cont(int b, int x, int y, t_env *env);
 int				julia_mouse(int x, int y, t_env *env);
@@ -94,6 +108,7 @@ int				key_press_hook(int keycode, t_env *env);
 int				more_keys(int keycode, t_env *env);
 int				even_more_keys(int keycode, t_env *env);
 int				help_window_checks(int keycode, t_env *env);
+void			show_help_window(t_env *env);
 void			key_zoom(t_env *env, int zoom);
 void			increase_carpet(t_env *env);
 void			decrease_carpet(t_env *env);

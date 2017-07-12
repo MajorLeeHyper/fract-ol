@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 00:10:01 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/11 10:39:13 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 16:48:50 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void		begin_burning_ship(t_env *env)
 	env->miny = -2.67;
 	env->maxx = 1.99;
 	env->maxy = 1.88;
-	env->help = 1;
+	env->help = 0;
 	env->r = 25;
-	env->g = 13;
+	env->g = 15;
 	env->b = 255;
 	env->zc = 0;
 }
