@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 15:06:59 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 17:56:05 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:24:37 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int		more_keys(int keycode, t_env *env)
 	{
 		if (env->iter_max > 0)
 		{
-			if (env->iter_max <= 50)
+			if (env->iter_max >= 50)
 				env->iter_max -= 10;
 			else
 				env->iter_max -= 1;
