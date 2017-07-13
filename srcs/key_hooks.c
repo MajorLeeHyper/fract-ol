@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 15:06:59 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 16:41:15 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 17:56:05 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,9 +121,9 @@ int		key_press_hook(int keycode, t_env *env)
 	}
 	else if (keycode == KEY_ESC)
 		exit(0);
-	else if (keycode == KEY_PLUS)
+	else if (keycode == KEY_PLUS && env->frac != 4)
 		key_zoom(env, 1);
-	else if (keycode == KEY_MINUS)
+	else if (keycode == KEY_MINUS && env->frac != 4)
 		key_zoom(env, -1);
 	else
 		more_keys(keycode, env);

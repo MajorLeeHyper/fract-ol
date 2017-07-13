@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 14:16:44 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 17:52:13 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:17:23 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,15 @@ void	show_help_window(t_env *env)
 	mlx_string_put(env->mlx, env->win, 10, 240, HELP, "esc = Quit");
 	mlx_string_put(env->mlx, env->win, 10, 260, HELP, "H = Show/Hide Help");
 	mlx_string_put(env->mlx, env->win, 10, 280, HELP, "Ctrl/alt/com = colors");
+	mlx_string_put(env->mlx, env->win, 10, 300, HELP, "Spacebar = Julia Mouse");
 }
+
 void	show_iterations(t_env *env)
 {
 	char *num;
 
 	num = ft_itoa(env->iter_max);
-	mlx_string_put(env->mlx, env->win, 10, 680, 0xFFFFFF, "Iteration Count = ");
-	mlx_string_put(env->mlx, env->win, 190, 680, 0xFFFFFF, num);
+	mlx_string_put(env->mlx, env->win, 10, 680, 0xAAAAAA, "Iteration Count = ");
+	mlx_string_put(env->mlx, env->win, 190, 680, 0xAAAAAA, num);
 	free(num);
 }

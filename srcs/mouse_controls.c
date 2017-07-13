@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 00:57:19 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 11:52:49 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:01:34 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		mouse_zoom_cont(int b, int x, int y, t_env *env)
 {
-	if ((b == 2 || b == 5) && x >= 0 && x<= WIN_X && y>= 0 && y<= WIN_Y &&
+	if ((b == 2 || b == 5) && x >= 0 && x <= WIN_X && y >= 0 && y <= WIN_Y &&
 			env->zc > -5)
 	{
 		env->minx = env->mx - (env->dx * 1.5) / 2;
@@ -49,6 +49,7 @@ int		mouse_zoom(int b, int x, int y, t_env *env)
 	}
 	return (0);
 }
+
 int		julia_mouse(int x, int y, t_env *env)
 {
 	if (env->frac == 2 && x >= 0 && y >= 0 && x <= WIN_X && y < WIN_Y &&

@@ -6,13 +6,13 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 00:10:01 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 16:48:50 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:14:01 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void		begin_burning_ship(t_env *env)
+void	begin_burning_ship(t_env *env)
 {
 	env->frac = 3;
 	env->iter_max = 100;
@@ -27,33 +27,30 @@ void		begin_burning_ship(t_env *env)
 	env->zc = 0;
 }
 
-void	burning_ship(t_env *env)
+void	burning_ship(t_env *e)
 {
-	env->x = -1;
-	while (++env->x < WIN_X)
+	e->x = -1;
+	while (++e->x < WIN_X)
 	{
-		env->y = -1;
-		while(++env->y < WIN_Y)
+		e->y = -1;
+		while (++e->y < WIN_Y)
 		{
-			env->cr = env->minx + ((double)env->x * (env->maxx - env->minx)
-					/ WIN_X);
-			env->ci = env->miny + ((double)env->y * (env->maxy - env->miny)
-					/ WIN_Y);
-			env->zr = 0;
-			env->zi = 0;
-			env->i = 0;
-			while (env->zr * env->zr +env->zi * env->zi < 4 && env-> i <
-					env->iter_max)
+			e->cr = e->minx + ((double)e->x * (e->maxx - e->minx) / WIN_X);
+			e->ci = e->miny + ((double)e->y * (e->maxy - e->miny) / WIN_Y);
+			e->zr = 0;
+			e->zi = 0;
+			e->i = 0;
+			while (e->zr * e->zr + e->zi * e->zi < 4 && e->i < e->iter_max)
 			{
-				env->tmp = env->zr;
-				env->zr = env->zr * env->zr - env->zi * env->zi + env->cr;
-				env->zi = 2 * fabs(env->zi * env->tmp) + env->ci;
-				env->i++;
+				e->tmp = e->zr;
+				e->zr = e->zr * e->zr - e->zi * e->zi + e->cr;
+				e->zi = 2 * fabs(e->zi * e->tmp) + e->ci;
+				e->i++;
 			}
-			if (env->i == env->iter_max)
-				mlx_pixel_put(env->mlx, env->win, env->x, env->y, 0);
+			if (e->i == e->iter_max)
+				mlx_pixel_put(e->mlx, e->win, e->x, e->y, 0);
 			else
-				mlx_pixel_put(env->mlx, env->win, env->x, env->y, color(env));
+				mlx_pixel_put(e->mlx, e->win, e->x, e->y, color(e));
 		}
 	}
 }

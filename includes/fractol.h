@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:08:10 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 17:48:23 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:15:08 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@
 
 # define WIN_X 700
 # define WIN_Y 700
+
+# define MOUSEMOTION 6
+# define MOUSEPOINTER (1L<<6)
+# define KEYPRESS 2
+# define KEYPRESSPOINTER (1L<<0)
 
 /*
 ** Help text color definition to save space
@@ -49,8 +54,6 @@
 # define KEY_PAGE_UP 116
 # define KEY_PAGE_DOWN 121
 # define KEY_SPACE 49
-
-
 
 typedef struct	s_env
 {

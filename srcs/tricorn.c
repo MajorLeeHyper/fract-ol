@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 10:48:40 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 16:49:20 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 18:04:21 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,32 +27,29 @@ void	begin_tricorn(t_env *env)
 	env->zc = 0;
 }
 
-void	tricorn(t_env *env)
+void	tricorn(t_env *e)
 {
-	env->x = -1;
-	while (++env->x < WIN_X)
+	e->x = -1;
+	while (++e->x < WIN_X)
 	{
-		env->y = -1;
-		while (++env->y < WIN_Y)
+		e->y = -1;
+		while (++e->y < WIN_Y)
 		{
-			env->cr = env->minx + ((double)env->x * (env->maxx - env->minx)
-					/ WIN_X);
-			env->ci = env->miny + ((double)env->y * (env->maxy - env->miny)
-					/ WIN_Y);
-			env->zr = 0;
-			env->zi = 0;
-			env->i = 0;
-			while (env->zr * env->zr + env->zi * env->zi < 4 && env->i++ <
-					env->iter_max)
+			e->cr = e->minx + ((double)e->x * (e->maxx - e->minx) / WIN_X);
+			e->ci = e->miny + ((double)e->y * (e->maxy - e->miny) / WIN_Y);
+			e->zr = 0;
+			e->zi = 0;
+			e->i = 0;
+			while (e->zr * e->zr + e->zi * e->zi < 4 && e->i++ < e->iter_max)
 			{
-				env->tmp = env->zr;
-				env->zr = env->zr * env->zr - env->zi * env->zi + env->cr;
-				env->zi = -2 * env->zi * env->tmp + env->ci;
+				e->tmp = e->zr;
+				e->zr = e->zr * e->zr - e->zi * e->zi + e->cr;
+				e->zi = -2 * e->zi * e->tmp + e->ci;
 			}
-			if (env->i - 1 == env->iter_max)
-				mlx_pixel_put(env->mlx, env->win, env->x, env->y, 0);
+			if (e->i - 1 == e->iter_max)
+				mlx_pixel_put(e->mlx, e->win, e->x, e->y, 0);
 			else
-				mlx_pixel_put(env->mlx, env->win, env->x, env->y, color(env));
+				mlx_pixel_put(e->mlx, e->win, e->x, e->y, color(e));
 		}
 	}
 }
