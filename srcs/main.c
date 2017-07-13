@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:08:30 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 16:44:34 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 17:48:00 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	draw(t_env *env)
 			sierpinski_carpet(env);
 	else if (env->frac == 5)
 		tricorn(env);
+	show_iterations(env);
 }
 
 void	start_fract(int fract, t_env *env)

@@ -6,7 +6,7 @@
 /*   By: dnelson <dnelson@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 14:08:10 by dnelson           #+#    #+#             */
-/*   Updated: 2017/07/12 16:43:30 by dnelson          ###   ########.fr       */
+/*   Updated: 2017/07/12 17:48:23 by dnelson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <math.h>
 # include <mlx.h>
 
-# define WIN_X 500
-# define WIN_Y 500
+# define WIN_X 700
+# define WIN_Y 700
 
 /*
 ** Help text color definition to save space
@@ -112,5 +112,6 @@ void			show_help_window(t_env *env);
 void			key_zoom(t_env *env, int zoom);
 void			increase_carpet(t_env *env);
 void			decrease_carpet(t_env *env);
+void			show_iterations(t_env *env);
 
 #endif
